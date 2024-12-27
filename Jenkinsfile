@@ -1,7 +1,7 @@
 pipeline{
   agent any
   tools{
-    maven 'Maven'
+    maven 'sonar-maven'
   }
   environment{
     JAVA_PATH="C:\\Program Files\\Java\\jdk-17\\bin"
