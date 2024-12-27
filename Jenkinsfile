@@ -8,9 +8,9 @@ pipeline{
   }
   stages{
     stage('Build'){
-      steps{
-        bat '''mvn clean package'''
-      }
+      dir('target\pom.xml') { // Adjust if the POM is in a subdirectory
+            bat 'mvn clean package'
+        }
     }
     stage('SonarQube Analysis'){
        environment{
