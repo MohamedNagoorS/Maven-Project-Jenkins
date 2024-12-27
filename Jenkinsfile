@@ -7,6 +7,10 @@ pipeline{
     JAVA_PATH="C:\\Program Files\\Java\\jdk-17\\bin"
   }
   stages{
+    stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
     stage('Build'){
       steps{
       dir('my-app') { // Adjust if the POM is in a subdirectory
