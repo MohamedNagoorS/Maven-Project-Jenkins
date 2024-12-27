@@ -26,11 +26,7 @@ pipeline{
       steps{
         bat '''
         set PATH=%JAVA_PATH%
-        mvn clean verify sonar:sonar ^ 
-  -Dsonar.projectKey=Maven-1 ^
-  -Dsonar.projectName='Maven-1' ^
-  -Dsonar.host.url=http://localhost:9000 ^
-  -Dsonar.token=sqp_d2584ca45178f0ab9bc525a746f6221df0f60d77
+       mvn clean verify sonar:sonar \ -Dsonar.projectKey=Maven-1 \ -Dsonar.projectName='Maven-1' \ -Dsonar.host.url=http://localhost:9000 \ -Dsonar.token=sqp_d2584ca45178f0ab9bc525a746f6221df0f60d77
         '''
       }
     }
