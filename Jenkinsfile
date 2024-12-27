@@ -29,6 +29,7 @@ pipeline{
        bat '''
        set PATH=%JAVA_PATH%;
        set PATH=%MAVEN_HOME%\\bin;%PATH%;
+       cd my-app
        mvn clean verify sonar:sonar -Dsonar.projectKey=Maven-1 -Dsonar.projectName='Maven-1' -Dsonar.source=my-app -Dsonar.host.url=http://localhost:9000 -Dsonar.token=${SONAR_TOKEN}
        '''
    }
