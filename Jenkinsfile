@@ -8,7 +8,7 @@ pipeline{
   }
   stages{
     stage('Build'){
-      dir('target\pom.xml') { // Adjust if the POM is in a subdirectory
+      dir('my-app') { // Adjust if the POM is in a subdirectory
             bat 'mvn clean package'
         }
     }
